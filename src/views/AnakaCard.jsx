@@ -13,22 +13,39 @@ export default class AnakaCard extends Component {
       name: '',
       img: '',
       selected: thankYouV1,
+      nameFontSize: 40,
     }
   }
 
 
 
-  getImage = async () => {
+  getImage = async (format) => {
     try {
-      console.log(this.nodeRef)
-      const dataURL = await toJpeg(this.nodeRef.current);
+      let dataURL;
+      
+      if (format === 'jpeg') {
+        dataURL = await toJpeg(this.nodeRef.current);
+      } else {
+        dataURL = await toPng(this.nodeRef.current);
+      }
+      
       const imageInstance = new Image();
       imageInstance.src = dataURL;
       
-      this.setState({img: imageInstance.src, image: imageInstance })
+      this.setState({img: imageInstance.src })
+      this.download(imageInstance.src, 'Thank you card', format)
+
     } catch (error) {
-      console.error('you got an error m8ttt', error);
+      console.error(error);
     }
+  }
+
+  download = (data, fileName, extension) => {
+    const link = document.createElement('a');
+    link.setAttribute('href', data);
+    link.setAttribute('download', `${fileName}.${extension}`);
+    link.click();
+    link.remove();
   }
 
 
@@ -36,12 +53,16 @@ export default class AnakaCard extends Component {
     this.setState({selected: template})
   }
 
+  handleInputChange = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
 
   render() {
     return (
       <div className="anakacard">
           <div className="card_config">
-            <h2>Select template</h2>
+            <h2>Select a template</h2>
             <div className="template_picker">
               <img src={thankYouV1} alt="" onClick={() => this.handleChangeTemplate(thankYouV1)} className="img-fluid" />
               <img src={thankYouV2} alt="" onClick={() => this.handleChangeTemplate(thankYouV2)} className="img-fluid" />
@@ -49,21 +70,23 @@ export default class AnakaCard extends Component {
             </div>
             <div className="controls">
               <label>Name</label>
-              <input type="text" onChange={e => this.setState({name: e.target.value})} />
+              <input type="text" name='name' onChange={e => this.handleInputChange(e)} />
+              <label>font size (pixels)</label>
+              <input type="number" name='nameFontSize' onChange={e => this.handleInputChange(e)} value={this.state.nameFontSize}/>
               <div className="generate">
                 <h2>Generate image</h2>
                 <div className="buttons">
-                  <button className='btn' onClick={this.getImage}>Download jpeg</button>
-                  <button className='btn' onClick={this.getImage}>Download png</button>
-                  <button className='btn' onClick={this.getImage}>Copy as html</button>
+                  <button className='btn' onClick={() => this.getImage('jpeg')}>Download jpeg</button>
+                  <button className='btn' onClick={() => this.getImage('png')}>Download png</button>
+                  <button className='btn' onClick={() => {}}>Copy as html</button>
                 </div>
               </div>
             </div>
           </div>
           
           <div className='card_container' ref={this.nodeRef}>
-            <h1 className='name'>{this.state.name}</h1>
             <img src={this.state.selected} alt="" className='img-fluid' />
+            <p className='name' style={{fontSize: this.state.nameFontSize + 'px'}}>{this.state.name}</p>
           </div>
       </div>  
     );

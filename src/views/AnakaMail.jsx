@@ -71,8 +71,8 @@ const AnakaMail = () => {
       <main>
         <Editor data={data} setData={setData} />
         <section className="preview-col">
-          <button className={`copy-btn ${btn.class}`} disabled={btn.class != '' ? true : false} onClick={copyCard}>
-            <i className={btn.class == '' ? 'far fa-copy' : 'fas fa-check'} ></i> {btn.message}
+          <button className={`copy-btn ${btn.class}`} disabled={btn.class !== '' ? true : false} onClick={copyCard}>
+            <i className={btn.class === '' ? 'far fa-copy' : 'fas fa-check'} ></i> {btn.message}
           </button>
           <div className='form-container'>
             {

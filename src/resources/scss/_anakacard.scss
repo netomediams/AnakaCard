@@ -1,8 +1,10 @@
 .anakacard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     padding: 4rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
 
     .card_config {
         h2 {
@@ -76,7 +78,7 @@
             input {
                 padding: .5rem 1rem;
                 margin: 0 auto !important;
-                width: 90%;
+                width: calc(60vw - 2rem);
                 border: 3px solid rgba(#27aae1, .3);
                 outline: none;
                 border-radius: 7px;
@@ -85,7 +87,7 @@
                 font: inherit;
                 transition: all .3s ease;
 
-                @media (min-width: 576px) {
+                @media (min-width: 768px) {
                     width: 40vw;
                     max-width: 350px;
                     margin: .25rem 1rem;
@@ -122,9 +124,13 @@
             left: 40%;
             color: white;
             margin: 0;
-            font-size: 60px;
+            font-size: 7vw;
             font-style: italic;
             white-space: nowrap;
+
+            @media (min-width: 740px) {
+                font-size: 4vw;
+            }
         }
     }
 }
