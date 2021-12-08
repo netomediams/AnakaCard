@@ -3,6 +3,7 @@ import { toPng, toJpeg } from 'html-to-image';
 import thankYouV1 from '../resources/images/cards/Christmas_thank_you_card_v1_800x1075_nameless.jpg'
 import thankYouV2 from '../resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless.jpg'
 import thankYouV3 from '../resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless.jpg'
+import {copyToClipboard} from '../utils/copyToClipboard'
 
 export default class AnakaCard extends Component {
 
@@ -22,7 +23,7 @@ export default class AnakaCard extends Component {
   getImage = async (format) => {
     try {
       let dataURL;
-      
+
       if (format === 'jpeg') {
         dataURL = await toJpeg(this.nodeRef.current);
       } else {
@@ -58,6 +59,7 @@ export default class AnakaCard extends Component {
   }
 
 
+
   render() {
     return (
       <div className="anakacard">
@@ -78,16 +80,40 @@ export default class AnakaCard extends Component {
                 <div className="buttons">
                   <button className='btn' onClick={() => this.getImage('jpeg')}>Download jpeg</button>
                   <button className='btn' onClick={() => this.getImage('png')}>Download png</button>
-                  <button className='btn' onClick={() => {}}>Copy as html</button>
+                  <button className='btn' onClick={() => copyToClipboard('card_container_table')}>Copy as html</button>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className='card_container' ref={this.nodeRef}>
+          {/* <div id='card_container' className='card_container' ref={this.nodeRef}>
+            <img src={this.state.selected} alt="" className='img-fluid' />
+            <p className='name' style={{fontSize: this.state.nameFontSize + 'px'}}>{this.state.name}</p>
+          </div> */}
+          <div id='card_container' className='card_container' ref={this.nodeRef}>
             <img src={this.state.selected} alt="" className='img-fluid' />
             <p className='name' style={{fontSize: this.state.nameFontSize + 'px'}}>{this.state.name}</p>
           </div>
+          <table id='card_container_table' style={{ 
+            background: `url(${this.state.selected})`, 
+            backgroundSize: 'cover', 
+            backgroundRepeat: 'no-repeat', 
+            fontSize: `${this.state.nameFontSize}px`,
+          }}>
+            <tr style={{height: '54%'}}></tr>
+            <td style={{
+                paddingLeft: '40%',
+              }}>  
+              <tr style={{
+                fontSize: `${this.state.nameFontSize}px`,
+                color: 'white'
+              }}>
+                {this.state.name} 
+              </tr>
+            </td>
+            <tr></tr>
+
+          </table>
       </div>  
     );
   }
