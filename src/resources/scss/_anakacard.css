@@ -1,0 +1,42 @@
+.anakacard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.anakacard .card_config .template_picker {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .anakacard .card_config .template_picker {
+    flex-direction: row;
+  }
+}
+
+.anakacard .card_config .template_picker img {
+  max-width: calc(33% - 2rem);
+}
+
+@media (min-width: 1200px) {
+  .anakacard .card_config .template_picker img {
+    max-width: 30%;
+  }
+}
+
+.anakacard .card_container {
+  position: relative;
+}
+
+.anakacard .card_container .name {
+  position: absolute;
+  bottom: 38%;
+  left: 40%;
+  color: white;
+  margin: 0;
+  font-size: 60px;
+  font-style: italic;
+  white-space: nowrap;
+}
