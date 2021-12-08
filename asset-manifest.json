@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/anakaCard/static/css/main.75ee4dd4.chunk.css",
+    "main.js": "/anakaCard/static/js/main.75e073ee.chunk.js",
+    "main.js.map": "/anakaCard/static/js/main.75e073ee.chunk.js.map",
+    "runtime-main.js": "/anakaCard/static/js/runtime-main.0ba9988c.js",
+    "runtime-main.js.map": "/anakaCard/static/js/runtime-main.0ba9988c.js.map",
+    "static/js/2.abb8e641.chunk.js": "/anakaCard/static/js/2.abb8e641.chunk.js",
+    "static/js/2.abb8e641.chunk.js.map": "/anakaCard/static/js/2.abb8e641.chunk.js.map",
+    "index.html": "/anakaCard/index.html",
+    "static/css/main.75ee4dd4.chunk.css.map": "/anakaCard/static/css/main.75ee4dd4.chunk.css.map",
+    "static/js/2.abb8e641.chunk.js.LICENSE.txt": "/anakaCard/static/js/2.abb8e641.chunk.js.LICENSE.txt",
+    "static/media/Christmas_thank_you_card_v1_800x1075_nameless.1a72efba.jpg": "/anakaCard/static/media/Christmas_thank_you_card_v1_800x1075_nameless.1a72efba.jpg",
+    "static/media/Christmas_thank_you_card_v2_800x1075_nameless.b0ef951b.jpg": "/anakaCard/static/media/Christmas_thank_you_card_v2_800x1075_nameless.b0ef951b.jpg",
+    "static/media/Christmas_thank_you_card_v3_800x1075_nameless.a160c6a9.jpg": "/anakaCard/static/media/Christmas_thank_you_card_v3_800x1075_nameless.a160c6a9.jpg",
+    "static/media/header-logo.6e2ae94b.png": "/anakaCard/static/media/header-logo.6e2ae94b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ba9988c.js",
+    "static/js/2.abb8e641.chunk.js",
+    "static/css/main.75ee4dd4.chunk.css",
+    "static/js/main.75e073ee.chunk.js"
+  ]
+}
