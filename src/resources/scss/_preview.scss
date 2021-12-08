@@ -1,0 +1,35 @@
+// main: style.scss
+
+.preview-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .copy-btn{
+    display: block;
+    background: #27aae1;
+    color: whitesmoke;
+    font-size: 1rem;
+    margin: 2rem auto;
+    padding: 0.75rem;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover, &:active {
+        background: darken(#27aae1, 10);
+    }
+
+    &--success {
+        background: rgb(52, 199, 89);
+
+        &:hover, &:active {
+            background: rgb(52, 199, 89);
+            cursor: default;
+        }
+    }
+  }
+}

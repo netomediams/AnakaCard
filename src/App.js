@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './resources/scss/style.scss';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import AnakaCard from './views/AnakaCard';
+import AnakaMail from './views/AnakaMail';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    return (
+      <div className="ms-main">
+        <BrowserRouter>
+          <Header />
+            <Routes>
+              <Route path='/' element={<AnakaCard />} />
+              <Route path='mail' element={<AnakaMail />} />
+            </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    );
 }
 
 export default App;

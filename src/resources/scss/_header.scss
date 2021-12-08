@@ -1,0 +1,40 @@
+// main: style.scss
+
+.ms-main {
+    &__header {
+        background-color: darken(#282C34, 2);
+        position: relative;
+        color: whitesmoke;
+        padding: 0 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+
+        img{
+            width: 50px;
+            margin-right: 20px;
+        }
+        .link {
+            font-size: 2rem;
+            margin: 0 1rem;
+            color: rgb(220, 220, 220);
+
+            h3 {
+                font-size: inherit;
+                color: inherit;
+                margin: 0;
+            }
+
+            &:hover, &:active {
+                color: white;
+            }
+        }
+
+        .active {
+            border-bottom: 2px solid rgb(39,170,225);
+            color: white;
+        }
+
+    }
+}
