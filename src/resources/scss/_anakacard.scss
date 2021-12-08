@@ -7,9 +7,7 @@
     margin: 0 auto;
 
     .card_config {
-        h2 {
 
-        }
         text-align: center;
 
         .template_picker {
@@ -35,13 +33,47 @@
             display: flex;
             flex-direction: column;
 
+            
+            .group {
+                display: flex;
+                justify-content: flex-start;
+                margin: .5rem 0;
+
+                input {
+                    margin: 0 1rem !important;
+                }
+
+                label {
+                    width: 150px !important;
+                }
+            }
+
+            .offsets {
+                display: flex;
+                flex-direction: column;
+
+                .group {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    input {
+                        max-width: 60px !important;
+                        margin: 0 1rem !important;
+                    }
+
+                    label {
+                        width: 150px !important;
+                    }
+                }
+            }
+
             .generate {
                 margin-top: 2rem;
                 padding-top: 1rem;
 
                 .buttons {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
 
                     .btn {
                         display: block;
@@ -53,6 +85,7 @@
                         border: none;
                         outline: none;
                         cursor: pointer;
+                        margin: 0 1rem;
     
                         &:active, &:hover {
                             background: #1a8bbb;
@@ -132,5 +165,11 @@
                 font-size: 4vw;
             }
         }
+    }
+
+    #card_container_table {
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center;
     }
 }

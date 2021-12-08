@@ -15,6 +15,14 @@ export default class AnakaCard extends Component {
       img: '',
       selected: thankYouV1,
       nameFontSize: 40,
+      nameSpacingOffset: 40,
+      nameVerticalOffset: 38,
+      // templateName: 'v1',
+      // imageLinks: {
+      //   'v1': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v1_800x1075_nameless.jpg',
+      //   'v2': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless.jpg',
+      //   'v3': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless.jpg',
+      // }
     }
   }
 
@@ -50,8 +58,8 @@ export default class AnakaCard extends Component {
   }
 
 
-  handleChangeTemplate = (template) => {
-    this.setState({selected: template})
+  handleChangeTemplate = (e, template) => {
+    this.setState({selected: template, templateName: e.target.name})
   }
 
   handleInputChange = (e) => {
@@ -66,39 +74,63 @@ export default class AnakaCard extends Component {
           <div className="card_config">
             <h2>Select a template</h2>
             <div className="template_picker">
-              <img src={thankYouV1} alt="" onClick={() => this.handleChangeTemplate(thankYouV1)} className="img-fluid" />
-              <img src={thankYouV2} alt="" onClick={() => this.handleChangeTemplate(thankYouV2)} className="img-fluid" />
-              <img src={thankYouV3} alt="" onClick={() => this.handleChangeTemplate(thankYouV3)} className="img-fluid" />
+              <img src={thankYouV1} name='v1' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV1)} className="img-fluid" />
+              <img src={thankYouV2} name='v2' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV2)} className="img-fluid" />
+              <img src={thankYouV3} name='v3' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV3)} className="img-fluid" />
             </div>
             <div className="controls">
-              <label>Name</label>
-              <input type="text" name='name' onChange={e => this.handleInputChange(e)} />
-              <label>font size (pixels)</label>
-              <input type="number" name='nameFontSize' onChange={e => this.handleInputChange(e)} value={this.state.nameFontSize}/>
+              <div className="group">
+                <label>Name</label>
+                <input type="text" name='name' onChange={e => this.handleInputChange(e)} />
+              </div>
+
+              <div className="offsets">
+
+                <div className="group">
+                  <label>font size (pixels)</label>
+                  <input type="number" name='nameFontSize' onChange={e => this.handleInputChange(e)} value={this.state.nameFontSize}/>
+                </div>
+
+                <div className="group">  
+                  <label>horizontal   offset</label>
+                  <input type="number" name='nameSpacingOffset' onChange={e => this.handleInputChange(e)} value={this.state.nameSpacingOffset}/>
+                </div>
+
+                <div className="group">
+                  <label>vertical offset</label>
+                  <input type="number" name='nameVerticalOffset' onChange={e => this.handleInputChange(e)} value={this.state.nameVerticalOffset}/>
+                </div>
+              </div>
+
               <div className="generate">
                 <h2>Generate image</h2>
-                <div className="buttons">
+                <div className="buttons"> 
                   <button className='btn' onClick={() => this.getImage('jpeg')}>Download jpeg</button>
                   <button className='btn' onClick={() => this.getImage('png')}>Download png</button>
-                  <button className='btn' onClick={() => copyToClipboard('card_container_table')}>Copy as html</button>
+                  {/* <button className='btn' onClick={() => copyToClipboard('card_container_table')}>Copy as html</button> */}
                 </div>
               </div>
             </div>
           </div>
           
-          {/* <div id='card_container' className='card_container' ref={this.nodeRef}>
-            <img src={this.state.selected} alt="" className='img-fluid' />
-            <p className='name' style={{fontSize: this.state.nameFontSize + 'px'}}>{this.state.name}</p>
-          </div> */}
           <div id='card_container' className='card_container' ref={this.nodeRef}>
+            <img src={this.state.selected} alt="" className='img-fluid' />
+            <p className='name' style={{
+              fontSize: this.state.nameFontSize + 'px',
+              left: this.state.nameSpacingOffset + '%',
+              bottom: this.state.nameVerticalOffset + '%',
+              }}>{this.state.name}</p>
+          </div>
+          {/* <div id='card_container' className='card_container' ref={this.nodeRef}>
             <img src={this.state.selected} alt="" className='img-fluid' />
             <p className='name' style={{fontSize: this.state.nameFontSize + 'px'}}>{this.state.name}</p>
           </div>
           <table id='card_container_table' style={{ 
-            background: `url(${this.state.selected})`, 
-            backgroundSize: 'cover', 
-            backgroundRepeat: 'no-repeat', 
+            background: `url(${this.state.imageLinks[this.state.templateName]})`, 
             fontSize: `${this.state.nameFontSize}px`,
+            backgroundSize: 'cover', 
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
           }}>
             <tr style={{height: '54%'}}></tr>
             <td style={{
@@ -113,7 +145,7 @@ export default class AnakaCard extends Component {
             </td>
             <tr></tr>
 
-          </table>
+          </table> */}
       </div>  
     );
   }

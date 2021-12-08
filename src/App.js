@@ -14,6 +14,7 @@ const App = () => {
             <Routes>
               <Route path='/' element={<AnakaCard />} />
               <Route path='mail' element={<AnakaMail />} />
+              <Route path='*' element={<AnakaCard />} />
             </Routes>
           <Footer />
         </BrowserRouter>
