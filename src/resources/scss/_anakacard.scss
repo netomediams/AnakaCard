@@ -1,3 +1,5 @@
+// main: style.scss
+
 .anakacard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -37,7 +39,9 @@
             .group {
                 display: flex;
                 justify-content: flex-start;
+                align-items: center ;
                 margin: .5rem 0;
+                text-align: left;
 
                 input {
                     margin: 0 1rem !important;
@@ -97,7 +101,6 @@
 
             label {
                 margin: 0;
-                margin-bottom: 1rem;
                 color: $primary;
                 font-weight: 600;
                 font-size: 1.2rem;
@@ -152,6 +155,8 @@
         position: relative;
 
         .name {
+            // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+            font-family: "Montserrat";
             position: absolute;
             bottom: 38%;
             left: 40%;
