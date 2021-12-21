@@ -1,8 +1,8 @@
 import { Component, createRef } from 'react';
 import { toPng, toJpeg } from 'html-to-image';
 import thankYouV1 from '../resources/images/cards/Christmas_thank_you_card_v1_800x1075_nameless.jpg'
-import thankYouV2 from '../resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless.jpg'
-import thankYouV3 from '../resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless.jpg'
+import thankYouV2 from '../resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless_s.jpeg'
+import thankYouV3 from '../resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless_s.jpeg'
 import {copyToClipboard} from '../utils/copyToClipboard'
 
 export default class AnakaCard extends Component {
@@ -20,8 +20,8 @@ export default class AnakaCard extends Component {
       // templateName: 'v1',
       // imageLinks: {
       //   'v1': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v1_800x1075_nameless.jpg',
-      //   'v2': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless.jpg',
-      //   'v3': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless.jpg',
+      //   'v2': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless_s.jpeg',
+      //   'v3': 'https://raw.githubusercontent.com/netomediams/AnakaCard/main/src/resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless_s.jpeg',
       // }
     }
   }
