@@ -1,8 +1,11 @@
 import { Component, createRef } from 'react';
 import { toPng, toJpeg } from 'html-to-image';
 import thankYouV1 from '../resources/images/cards/Christmas_thank_you_card_v1_800x1075_nameless.jpg'
-import thankYouV2 from '../resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless_s.jpeg'
-import thankYouV3 from '../resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless_s.jpeg'
+import thankYouV2 from '../resources/images/cards/Christmas_thank_you_card_v2_800x1075_nameless.jpg'
+import thankYouV3 from '../resources/images/cards/Christmas_thank_you_card_v3_800x1075_nameless.jpg'
+import thankYouV4 from '../resources/images/cards/Christmas_thank_you_card_v4_800x1075_nameless.jpg'
+import thankYouV5 from '../resources/images/cards/Christmas_thank_you_card_v5_800x1075_nameless_s.jpeg'
+import thankYouV6 from '../resources/images/cards/Christmas_thank_you_card_v6_800x1075_nameless_s.jpeg'
 import {copyToClipboard} from '../utils/copyToClipboard'
 
 export default class AnakaCard extends Component {
@@ -72,11 +75,17 @@ export default class AnakaCard extends Component {
     return (
       <div className="anakacard">
           <div className="card_config">
-            <h2>Select a template</h2>
+            <h2>Select a template for team member</h2>
             <div className="template_picker">
               <img src={thankYouV1} name='v1' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV1)} className="img-fluid" />
               <img src={thankYouV2} name='v2' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV2)} className="img-fluid" />
               <img src={thankYouV3} name='v3' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV3)} className="img-fluid" />
+            </div>
+            <h2>Select a template teams</h2>
+            <div className="template_picker">
+              <img src={thankYouV4} name='v4' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV4)} className="img-fluid" />
+              <img src={thankYouV5} name='v5' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV5)} className="img-fluid" />
+              <img src={thankYouV6} name='v6' alt="" onClick={(e) => this.handleChangeTemplate(e, thankYouV6)} className="img-fluid" />
             </div>
             <div className="controls">
               <div className="group">
