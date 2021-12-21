@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/AnakaCard/static/css/main.d4c305bb.chunk.css",
-    "main.js": "/AnakaCard/static/js/main.4bc7ca02.chunk.js",
-    "main.js.map": "/AnakaCard/static/js/main.4bc7ca02.chunk.js.map",
+    "main.css": "/AnakaCard/static/css/main.fb303a05.chunk.css",
+    "main.js": "/AnakaCard/static/js/main.c48537ca.chunk.js",
+    "main.js.map": "/AnakaCard/static/js/main.c48537ca.chunk.js.map",
     "runtime-main.js": "/AnakaCard/static/js/runtime-main.1519801a.js",
     "runtime-main.js.map": "/AnakaCard/static/js/runtime-main.1519801a.js.map",
-    "static/js/2.abb8e641.chunk.js": "/AnakaCard/static/js/2.abb8e641.chunk.js",
-    "static/js/2.abb8e641.chunk.js.map": "/AnakaCard/static/js/2.abb8e641.chunk.js.map",
+    "static/js/2.0126c077.chunk.js": "/AnakaCard/static/js/2.0126c077.chunk.js",
+    "static/js/2.0126c077.chunk.js.map": "/AnakaCard/static/js/2.0126c077.chunk.js.map",
     "index.html": "/AnakaCard/index.html",
-    "static/css/main.d4c305bb.chunk.css.map": "/AnakaCard/static/css/main.d4c305bb.chunk.css.map",
-    "static/js/2.abb8e641.chunk.js.LICENSE.txt": "/AnakaCard/static/js/2.abb8e641.chunk.js.LICENSE.txt",
+    "static/css/main.fb303a05.chunk.css.map": "/AnakaCard/static/css/main.fb303a05.chunk.css.map",
+    "static/js/2.0126c077.chunk.js.LICENSE.txt": "/AnakaCard/static/js/2.0126c077.chunk.js.LICENSE.txt",
     "static/media/Christmas_thank_you_card_v1_800x1075_nameless.1a72efba.jpg": "/AnakaCard/static/media/Christmas_thank_you_card_v1_800x1075_nameless.1a72efba.jpg",
     "static/media/Christmas_thank_you_card_v2_800x1075_nameless.b0ef951b.jpg": "/AnakaCard/static/media/Christmas_thank_you_card_v2_800x1075_nameless.b0ef951b.jpg",
     "static/media/Christmas_thank_you_card_v3_800x1075_nameless.a160c6a9.jpg": "/AnakaCard/static/media/Christmas_thank_you_card_v3_800x1075_nameless.a160c6a9.jpg",
+    "static/media/Christmas_thank_you_card_v4_800x1075_nameless.1a72efba.jpg": "/AnakaCard/static/media/Christmas_thank_you_card_v4_800x1075_nameless.1a72efba.jpg",
+    "static/media/Christmas_thank_you_card_v5_800x1075_nameless_s.0b699733.jpeg": "/AnakaCard/static/media/Christmas_thank_you_card_v5_800x1075_nameless_s.0b699733.jpeg",
+    "static/media/Christmas_thank_you_card_v6_800x1075_nameless_s.e2918914.jpeg": "/AnakaCard/static/media/Christmas_thank_you_card_v6_800x1075_nameless_s.e2918914.jpeg",
     "static/media/header-logo.6e2ae94b.png": "/AnakaCard/static/media/header-logo.6e2ae94b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1519801a.js",
-    "static/js/2.abb8e641.chunk.js",
-    "static/css/main.d4c305bb.chunk.css",
-    "static/js/main.4bc7ca02.chunk.js"
+    "static/js/2.0126c077.chunk.js",
+    "static/css/main.fb303a05.chunk.css",
+    "static/js/main.c48537ca.chunk.js"
   ]
 }
